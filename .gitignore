@@ -1,3 +1,11 @@
+#  Disallow SSL keys and certificate signing requests
+*.key
+*.csr
+*.crt
+
+# Ignore config file as there will be an example file available
+config.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

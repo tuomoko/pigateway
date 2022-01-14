@@ -1,0 +1,12 @@
+#TODO
+
+
+influxSettings = dict(
+
+)
+
+generalSettings = dict(
+
+)
+
+serialSettings = dict()
