@@ -1,0 +1,13 @@
+[Unit]
+Description="Energy meter daemon"
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/pigateway
+ExecStart=/home/pi/pigateway/env/bin/python /home/pi/pigateway/meter_daemon.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

@@ -29,3 +29,5 @@ def sample_data_10s():
     # Add the data to the database
     influx.add_measurement(config.influxSettings['database'], config.influxSettings['measurement'], data, tag)
 
+if __name__ == "__main__":
+    tl.start(block=True)
