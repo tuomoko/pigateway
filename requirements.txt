@@ -1,5 +1,4 @@
 requests
 minimalmodbus
-time
 timeloop
 datetime
