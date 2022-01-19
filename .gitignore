@@ -2,6 +2,7 @@
 *.key
 *.csr
 *.crt
+keys/
 
 # Ignore config file as there will be an example file available
 config.py

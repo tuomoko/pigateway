@@ -1,12 +1,16 @@
-#TODO
-
-
 influxSettings = dict(
-
+    url = 'https://influxdatabase.local/',
+    key = 'keys/my.key',
+    crt = 'keys/my.crt',
+    database = 'teho',
+    measurement = 'power_measurements'
 )
 
 generalSettings = dict(
-
+    device = 'my-device'
 )
 
-serialSettings = dict()
+serialSettings = dict(
+    port = '/dev/ttyAMA0',
+    address = 1
+)
