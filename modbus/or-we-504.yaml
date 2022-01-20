@@ -38,6 +38,5 @@ registers:
   description: Power factor
 - address: 7
   type: long
-  decimals: 0
   variable: E1
   description: Energy

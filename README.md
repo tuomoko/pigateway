@@ -25,3 +25,6 @@ Currently there are Modbus maps for ORNO OR-WE-504 and OR-WE-516 energy meters.
 11. Enable the service at bootup `sudo systemctl enable meter_daemon`
 
 
+## TODO
+- Implement all serial port settings in configuration file
+- Implement error handling
