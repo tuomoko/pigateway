@@ -1,3 +1,4 @@
+# influxSettings is a dictionary of Influx DB related settings
 influxSettings = dict(
     url = 'https://influxdatabase.local/',
     key = 'keys/my.key',
@@ -6,12 +7,18 @@ influxSettings = dict(
     measurement = 'power_measurements'
 )
 
-generalSettings = dict(
-    device = 'my-device',
-    meter_type = 'OR-WE-504'
-)
-
+# serialSettings is a dictionary of serial port settings
 serialSettings = dict(
     port = '/dev/ttyAMA0',
-    address = 1
+    baudrate = 9600,
+    timeout = 0.5
 )
+
+# deviceSettings is a list of dictionaries for each device to be read
+deviceSettings = [
+    dict(
+        address = 1,
+        map_file = 'modbus/or-we-504.yaml',
+        tag = 'power-meter'
+    )
+]
