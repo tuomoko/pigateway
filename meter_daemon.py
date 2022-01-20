@@ -29,7 +29,7 @@ def sample_data_10s():
         tag['device'] = device_tag
         # Add the data to the database
         if data:
-            influx.add_measurement(config.influxSettings['database'], config.influxSettings['measurement'], data, device_tag)
+            influx.add_measurement(config.influxSettings['database'], config.influxSettings['measurement'], data, tag)
 
 if __name__ == "__main__":
     tl.start(block=True)
