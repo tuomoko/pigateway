@@ -25,6 +25,8 @@ def sample_data_10s():
     for device_tag, device in devices.items():
         # Read the data
         data = device.read_registers()
+        tag = dict()
+        tag['device'] = device_tag
         # Add the data to the database
         if data:
             influx.add_measurement(config.influxSettings['database'], config.influxSettings['measurement'], data, device_tag)
