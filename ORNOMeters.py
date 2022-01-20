@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-u"""Read data from ORNO OR-WE-504 single phase energy meter.
+u"""Read data from ORNO energy meters through Modbus RTU.
 
 @author: Tuomo Kohtamäki
 """
@@ -10,7 +10,7 @@ import minimalmodbus
 print_debug = True
 
 class MeterORNO504():
-    """Client to communicate with energy meter."""
+    """Client to communicate with ORNO OR-WE-504 single phase energy meter."""
 
     def __init__(self, port, address):
         self.instrument = minimalmodbus.Instrument(port, address)  # port name, device address (in decimal)

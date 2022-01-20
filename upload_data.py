@@ -5,7 +5,7 @@ u"""Upload single measurement data to the cloud.
 @author: Tuomo Kohtamäki
 """
 from myinflux import MyInfluxClient
-from MeterORNO504 import MeterORNO504
+from ORNOMeters import MeterORNO504
 import config
 
 # Create an Influx client
@@ -22,5 +22,6 @@ tag = dict()
 tag['device'] = config.generalSettings['device']
 
 # Add the data to the database
-influx.add_measurement(config.influxSettings['database'], config.influxSettings['measurement'], data, tag)
+if data:
+    influx.add_measurement(config.influxSettings['database'], config.influxSettings['measurement'], data, tag)
 

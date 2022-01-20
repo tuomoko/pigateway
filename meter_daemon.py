@@ -5,9 +5,8 @@ u"""Upload measurement data to the cloud every 10 seconds.
 @author: Tuomo Kohtamäki
 """
 from myinflux import MyInfluxClient
-from MeterORNO504 import MeterORNO504
+from ORNOMeters import MeterORNO504
 import config
-import time
 from timeloop import Timeloop
 from datetime import timedelta
 
@@ -27,7 +26,8 @@ def sample_data_10s():
     # Read the data
     data = meter.read_registers()
     # Add the data to the database
-    influx.add_measurement(config.influxSettings['database'], config.influxSettings['measurement'], data, tag)
+    if data:
+        influx.add_measurement(config.influxSettings['database'], config.influxSettings['measurement'], data, tag)
 
 if __name__ == "__main__":
     tl.start(block=True)
