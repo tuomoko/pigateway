@@ -2,3 +2,4 @@ requests
 minimalmodbus
 timeloop
 datetime
+pyyaml

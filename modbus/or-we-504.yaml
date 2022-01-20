@@ -1,0 +1,43 @@
+# Modbus mapping for ORNO OR-WE-504
+
+registers:
+- address: 0
+  type: uint
+  decimals: 1
+  variable: U1
+  description: Voltage L1
+- address: 1
+  type: uint
+  decimals: 1
+  variable: I1
+  description: Current L1
+- address: 2
+  type: uint
+  decimals: 1
+  variable: f
+  description: Frequency
+- address: 3
+  type: uint
+  decimals: 0
+  variable: P1
+  description: Active power
+- address: 4
+  type: uint
+  decimals: 0
+  variable: Q1
+  description: Reactive power
+- address: 5
+  type: uint
+  decimals: 0
+  variable: S1
+  description: Apparent power
+- address: 6
+  type: uint
+  decimals: 3
+  variable: PF1
+  description: Power factor
+- address: 7
+  type: long
+  decimals: 0
+  variable: E1
+  description: Energy

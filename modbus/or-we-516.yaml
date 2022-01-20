@@ -1,0 +1,127 @@
+# Modbus mapping for ORNO OR-WE-516
+
+registers:
+
+# Voltages in registers 0x000E to 0x0012
+- address: 0x000E
+  type: float
+  variable: U1
+  description: Voltage L1
+- address: 0x0010
+  type: float
+  variable: U2
+  description: Voltage L2
+- address: 0x0012
+  type: float
+  variable: U3
+  description: Voltage L3
+
+# Frequency in register 0x0014
+- address: 0x0014
+  type: float
+  variable: f
+  description: Frequency
+
+# Currents in registers 0x0016 to 0x001A
+- address: 0x0016
+  type: float
+  variable: I1
+  description: Current L1
+- address: 0x0018
+  type: float
+  variable: I2
+  description: Current L2
+- address: 0x001A
+  type: float
+  variable: I3
+  description: Current L3
+
+# Active power in registers 0x001C to 0x0022
+- address: 0x001C
+  type: float
+  variable: P
+  description: Active power total
+- address: 0x001E
+  type: float
+  variable: P1
+  description: Active power L1
+- address: 0x0020
+  type: float
+  variable: P2
+  description: Active power L2
+- address: 0x0022
+  type: float
+  variable: P3
+  description: Active power L3
+
+# Reactive power in registers 0x0024 to 0x002A
+- address: 0x0024
+  type: float
+  variable: Q
+  description: Reactive power total
+- address: 0x0026
+  type: float
+  variable: Q1
+  description: Reactive power L1
+- address: 0x0028
+  type: float
+  variable: Q2
+  description: Reactive power L2
+- address: 0x002A
+  type: float
+  variable: Q3
+  description: Reactive power L3
+
+# Apparent power in registers 0x002C to 0x0032
+- address: 0x002C
+  type: float
+  variable: S
+  description: Apparent power total
+- address: 0x002E
+  type: float
+  variable: S1
+  description: Apparent power L1
+- address: 0x0030
+  type: float
+  variable: S2
+  description: Apparent power L2
+- address: 0x0032
+  type: float
+  variable: S3
+  description: Apparent power L3
+
+# Power factor in registers 0x0034 to 0x003A
+- address: 0x0034
+  type: float
+  variable: PF
+  description: Power factor total
+- address: 0x0036
+  type: float
+  variable: PF1
+  description: Power factor L1
+- address: 0x0038
+  type: float
+  variable: PF2
+  description: Power factor L2
+- address: 0x003A
+  type: float
+  variable: PF3
+  description: Power factor L3
+  
+# Energy in registers 0x0100 to 0x0106
+- address: 0x0100
+  type: float
+  variable: E
+  description: Energy total
+- address: 0x0102
+  type: float
+  variable: E1
+  description: Energy L1
+- address: 0x0104
+  type: float
+  variable: E2
+  description: Energy L2
+- address: 0x0106
+  type: float
+  variable: E3
+  description: Energy L3

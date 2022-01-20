@@ -1,0 +1,54 @@
+# Modbus mapping template
+# The file should contain registers with the following details:
+# address: the modbus address for the data (0 to 65535)
+# type: the data type to read, currently the following are supported: 
+#       uint     = 16 bit unsigned integer (data length = 1)
+#       int      = 16 bit signed integer (data length = 1)
+#       long     = 32 bit unsigned integer (data length = 2)
+#       longint  = 32 bit signed integer (data length = 2)
+#       float    = 32 bit floating point number (data length = 2)
+# decimals: how many decimals are in the 16-bit integer datatypes, e.g. 2315 with decimals = 1 would mean value of 231.5
+# variable: name of the variable in influxdb
+# description: human readable description, only for documentation and debugging purposes 
+
+registers:
+- address: 0
+  type: uint
+  decimals: 1
+  variable: U1
+  description: Voltage L1
+- address: 1
+  type: uint
+  decimals: 1
+  variable: I1
+  description: Current L1
+- address: 2
+  type: uint
+  decimals: 1
+  variable: f
+  description: Frequency
+- address: 3
+  type: uint
+  decimals: 0
+  variable: P1
+  description: Active power
+- address: 4
+  type: uint
+  decimals: 0
+  variable: Q1
+  description: Reactive power
+- address: 5
+  type: uint
+  decimals: 0
+  variable: S1
+  description: Apparent power
+- address: 6
+  type: uint
+  decimals: 3
+  variable: PF1
+  description: Power factor
+- address: 7
+  type: long
+  decimals: 0
+  variable: E1
+  description: Energy
