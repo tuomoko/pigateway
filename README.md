@@ -1,5 +1,5 @@
 # pigateway
-Raspberry Pi gateway from Modbus RTU to cloud (influxdb)
+Raspberry Pi gateway from Modbus RTU to cloud (influxdb). Currently supported is the ORNO OR-WE-504 energy meter.
 
 ## Basic setup for Raspberry Pi
 1. Install Raspberry Pi OS Lite to an SD card
