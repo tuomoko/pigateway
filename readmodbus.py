@@ -19,6 +19,11 @@ class ReadModbus():
             self.instrument.serial.baudrate = serialSettings['baudrate']
         if 'timeout' in serialSettings:
             self.instrument.serial.timeout = serialSettings['timeout']
+        if 'parity' in serialSettings:
+            if serialSettings['parity'] == 'even':
+                self.instrument.serial.parity = minimalmodbus.serial.PARITY_EVEN
+            else:
+                self.instrument.serial.parity = minimalmodbus.serial.PARITY_NONE
         #TODO add other serial settings
         
         # Load the modbus map
