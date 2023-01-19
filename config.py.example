@@ -12,6 +12,7 @@ serialSettings = dict(
     port = '/dev/ttyAMA0',
     baudrate = 9600,
     timeout = 0.5
+    parity = 'none'
 )
 
 # deviceSettings is a list of dictionaries for each device to be read
